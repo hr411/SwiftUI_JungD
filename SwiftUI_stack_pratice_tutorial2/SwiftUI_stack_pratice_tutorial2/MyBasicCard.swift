@@ -18,13 +18,13 @@ struct MyBasicCard: View {
            
             VStack(alignment: .leading, spacing: 0){
                 Divider().opacity(0)
-                Text("하하하")
+                Text("기상")
                     .fontWeight(.bold)
                     .font(.system(size: 23))
                     .foregroundColor(.white)
                 
                 Spacer().frame(height: 5)
-                Text("하하하")
+                Text("7 AM - 8 AM")
                     .foregroundColor(.white)
             }
             
