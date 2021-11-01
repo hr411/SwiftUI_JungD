@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1741ACCC272992E900845FC4 /* MyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1741ACCB272992E900845FC4 /* MyCard.swift */; };
 		1741ACCE272AE9CB00845FC4 /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1741ACCD272AE9CB00845FC4 /* MyList.swift */; };
+		1741ACD0273021D500845FC4 /* MyNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1741ACCF273021D500845FC4 /* MyNavigationView.swift */; };
+		1741ACD2273026DF00845FC4 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1741ACD1273026DF00845FC4 /* MyProfileView.swift */; };
 		17BE9D9F2728526D0034A5E5 /* SwiftUI_stack_pratice_tutorial2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BE9D9E2728526D0034A5E5 /* SwiftUI_stack_pratice_tutorial2App.swift */; };
 		17BE9DA12728526D0034A5E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BE9DA02728526D0034A5E5 /* ContentView.swift */; };
 		17BE9DA3272852700034A5E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BE9DA2272852700034A5E5 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		1741ACCB272992E900845FC4 /* MyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCard.swift; sourceTree = "<group>"; };
 		1741ACCD272AE9CB00845FC4 /* MyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
+		1741ACCF273021D500845FC4 /* MyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationView.swift; sourceTree = "<group>"; };
+		1741ACD1273026DF00845FC4 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		17BE9D9B2728526D0034A5E5 /* SwiftUI_stack_pratice_tutorial2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_stack_pratice_tutorial2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BE9D9E2728526D0034A5E5 /* SwiftUI_stack_pratice_tutorial2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_stack_pratice_tutorial2App.swift; sourceTree = "<group>"; };
 		17BE9DA02728526D0034A5E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 		17BE9D922728526D0034A5E5 = {
 			isa = PBXGroup;
 			children = (
+				1741ACCF273021D500845FC4 /* MyNavigationView.swift */,
 				17BE9D9D2728526D0034A5E5 /* SwiftUI_stack_pratice_tutorial2 */,
 				17BE9DAE272852700034A5E5 /* SwiftUI_stack_pratice_tutorial2Tests */,
 				17BE9DB8272852700034A5E5 /* SwiftUI_stack_pratice_tutorial2UITests */,
@@ -110,6 +115,7 @@
 				17BE9DCC2728530D0034A5E5 /* MyBasicCard.swift */,
 				1741ACCD272AE9CB00845FC4 /* MyList.swift */,
 				1741ACCB272992E900845FC4 /* MyCard.swift */,
+				1741ACD1273026DF00845FC4 /* MyProfileView.swift */,
 			);
 			path = SwiftUI_stack_pratice_tutorial2;
 			sourceTree = "<group>";
@@ -269,12 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1741ACD2273026DF00845FC4 /* MyProfileView.swift in Sources */,
 				17BE9DCB272852C20034A5E5 /* MyProjectCard.swift in Sources */,
 				17BE9DA12728526D0034A5E5 /* ContentView.swift in Sources */,
 				17BE9DCD2728530D0034A5E5 /* MyBasicCard.swift in Sources */,
 				1741ACCC272992E900845FC4 /* MyCard.swift in Sources */,
 				17BE9D9F2728526D0034A5E5 /* SwiftUI_stack_pratice_tutorial2App.swift in Sources */,
 				1741ACCE272AE9CB00845FC4 /* MyList.swift in Sources */,
+				1741ACD0273021D500845FC4 /* MyNavigationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

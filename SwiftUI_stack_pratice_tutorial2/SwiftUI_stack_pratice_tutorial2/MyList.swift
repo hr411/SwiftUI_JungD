@@ -49,11 +49,11 @@ struct MyList: View{
             }
             .listRowInsets(EdgeInsets.init(top:5, leading: 5, bottom: 5, trailing: 5))
             .listRowBackground(Color.yellow)
-            .navigationTitle("쏭쏭의 리스트")
+//            .navigationTitle("쏭쏭의 리스트")
         }
         .listStyle(GroupedListStyle())
 //        .listStyle(PlainListStyle())
-        .navigationBarTitle("메인")
+//        .navigationBarTitle("메인")
 //        .navigationBarHidden(self.isNavigationBarHidden)
         .onAppear{
             self.isNavigationBarHidden = false
