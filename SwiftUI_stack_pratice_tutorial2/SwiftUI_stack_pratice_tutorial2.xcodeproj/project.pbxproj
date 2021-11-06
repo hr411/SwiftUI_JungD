@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17204E0D2732A7BA00721D63 /* MyCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17204E0C2732A7BA00721D63 /* MyCircleImageView.swift */; };
+		17204E0F2736996400721D63 /* MyGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17204E0E2736996400721D63 /* MyGeometryReader.swift */; };
 		1741ACCC272992E900845FC4 /* MyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1741ACCB272992E900845FC4 /* MyCard.swift */; };
 		1741ACCE272AE9CB00845FC4 /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1741ACCD272AE9CB00845FC4 /* MyList.swift */; };
 		1741ACD0273021D500845FC4 /* MyNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1741ACCF273021D500845FC4 /* MyNavigationView.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		17204E0C2732A7BA00721D63 /* MyCircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCircleImageView.swift; sourceTree = "<group>"; };
+		17204E0E2736996400721D63 /* MyGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGeometryReader.swift; sourceTree = "<group>"; };
 		1741ACCB272992E900845FC4 /* MyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCard.swift; sourceTree = "<group>"; };
 		1741ACCD272AE9CB00845FC4 /* MyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
 		1741ACCF273021D500845FC4 /* MyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				1741ACCD272AE9CB00845FC4 /* MyList.swift */,
 				1741ACCB272992E900845FC4 /* MyCard.swift */,
 				1741ACD1273026DF00845FC4 /* MyProfileView.swift */,
+				17204E0E2736996400721D63 /* MyGeometryReader.swift */,
 				17204E0C2732A7BA00721D63 /* MyCircleImageView.swift */,
 			);
 			path = SwiftUI_stack_pratice_tutorial2;
@@ -282,6 +285,7 @@
 				1741ACD2273026DF00845FC4 /* MyProfileView.swift in Sources */,
 				17BE9DCB272852C20034A5E5 /* MyProjectCard.swift in Sources */,
 				17BE9DA12728526D0034A5E5 /* ContentView.swift in Sources */,
+				17204E0F2736996400721D63 /* MyGeometryReader.swift in Sources */,
 				17BE9DCD2728530D0034A5E5 /* MyBasicCard.swift in Sources */,
 				1741ACCC272992E900845FC4 /* MyCard.swift in Sources */,
 				17BE9D9F2728526D0034A5E5 /* SwiftUI_stack_pratice_tutorial2App.swift in Sources */,
