@@ -20,7 +20,7 @@ struct MyView : View{
                 .fontWeight(.black)
                 .font(.largeTitle)
                 .foregroundColor(Color.white)
-        }
+        }.animation(.none)
     }
 }
 
