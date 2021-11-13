@@ -15,6 +15,9 @@
 		17A731D02740065F0086683C /* SwiftUI_ButtonStyleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A731CF2740065F0086683C /* SwiftUI_ButtonStyleUITests.swift */; };
 		17A731D22740065F0086683C /* SwiftUI_ButtonStyleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A731D12740065F0086683C /* SwiftUI_ButtonStyleUITestsLaunchTests.swift */; };
 		17A731DF2740079B0086683C /* MyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A731DE2740079B0086683C /* MyButtonStyle.swift */; };
+		17A731E127400B890086683C /* MyRotateButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A731E027400B890086683C /* MyRotateButtonStyle.swift */; };
+		17A731E327400CAC0086683C /* MySmallerButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A731E227400CAC0086683C /* MySmallerButtonStyle.swift */; };
+		17A731E527400DCA0086683C /* MyBlurBottonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A731E427400DCA0086683C /* MyBlurBottonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		17A731CF2740065F0086683C /* SwiftUI_ButtonStyleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ButtonStyleUITests.swift; sourceTree = "<group>"; };
 		17A731D12740065F0086683C /* SwiftUI_ButtonStyleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ButtonStyleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		17A731DE2740079B0086683C /* MyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonStyle.swift; sourceTree = "<group>"; };
+		17A731E027400B890086683C /* MyRotateButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRotateButtonStyle.swift; sourceTree = "<group>"; };
+		17A731E227400CAC0086683C /* MySmallerButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySmallerButtonStyle.swift; sourceTree = "<group>"; };
+		17A731E427400DCA0086683C /* MyBlurBottonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlurBottonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 				17A731B42740065C0086683C /* SwiftUI_ButtonStyleApp.swift */,
 				17A731B62740065C0086683C /* ContentView.swift */,
 				17A731DE2740079B0086683C /* MyButtonStyle.swift */,
+				17A731E227400CAC0086683C /* MySmallerButtonStyle.swift */,
+				17A731E427400DCA0086683C /* MyBlurBottonStyle.swift */,
+				17A731E027400B890086683C /* MyRotateButtonStyle.swift */,
 				17A731B82740065F0086683C /* Assets.xcassets */,
 				17A731BA2740065F0086683C /* Preview Content */,
 			);
@@ -262,6 +271,9 @@
 			files = (
 				17A731B72740065C0086683C /* ContentView.swift in Sources */,
 				17A731DF2740079B0086683C /* MyButtonStyle.swift in Sources */,
+				17A731E127400B890086683C /* MyRotateButtonStyle.swift in Sources */,
+				17A731E327400CAC0086683C /* MySmallerButtonStyle.swift in Sources */,
+				17A731E527400DCA0086683C /* MyBlurBottonStyle.swift in Sources */,
 				17A731B52740065C0086683C /* SwiftUI_ButtonStyleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,19 +9,46 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack{
+        VStack(spacing:30){
             Button(
                 action:{
                     print("button clicked")
                 },label: {
                     Text("탭")
                         .fontWeight(.bold)
-                        .font(.system(size: 20))
-                        .foregroundColor(Color.white)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(20)
-                })
+                }).buttonStyle(MyButtonStyle(color: Color.blue, type: .tab))
+            
+            Button(
+                action:{
+                    print("button clicked")
+                },label: {
+                    Text("롱클릭")
+                        .fontWeight(.bold)
+                }).buttonStyle(MyButtonStyle(color: Color.red, type: .long))
+            
+            Button(
+                action:{
+                    print("button clicked")
+                },label: {
+                    Text("회전버튼")
+                        .fontWeight(.bold)
+                }).buttonStyle(MyRotateButtonStyle(color: Color.yellow))
+            
+            Button(
+                action:{
+                    print("button clicked")
+                },label: {
+                    Text("축소버튼")
+                        .fontWeight(.bold)
+                }).buttonStyle(MySmallerButtonStyle(color: Color.green))
+            
+            Button(
+                action:{
+                    print("button clicked")
+                },label: {
+                    Text("블러버튼")
+                        .fontWeight(.bold)
+                }).buttonStyle(MyBlurButtonStyle(color: Color.pink))
         }
     }
 }
