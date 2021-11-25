@@ -36,9 +36,8 @@ struct ContentView: View {
             LazyVGrid(columns: [
                 GridItem(.fixed(50)),
                 GridItem(.adaptive(minimum:20)),
-                GridItem(.flexible(minimum: 50))
+                GridItem(.flexible(minimum: 50)),
             ], spacing: 10, content: {
-                
                 ForEach(dummyDataArray , content: {(dataItem: MyModel) in
                     Rectangle().foregroundColor(Color.blue)
                         .frame(height: 120)
