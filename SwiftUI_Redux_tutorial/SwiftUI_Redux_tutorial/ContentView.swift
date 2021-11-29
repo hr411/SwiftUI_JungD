@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // 스토어 생성
+        let store = AppStore(state: AppState.init(currentDice: "⚀"), reducer: appReducer(_:_:))
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        DiceView().environmentObject(store)
     }
 }
 

@@ -12,6 +12,11 @@
 		170F20D72753D21C006FE5CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170F20D62753D21C006FE5CB /* Assets.xcassets */; };
 		170F20DA2753D21C006FE5CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170F20D92753D21C006FE5CB /* Preview Assets.xcassets */; };
 		170F20E12753D233006FE5CB /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F20E02753D233006FE5CB /* DiceView.swift */; };
+		170F20E32755139C006FE5CB /* MyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F20E22755139C006FE5CB /* MyButtonStyle.swift */; };
+		170F20E52755146E006FE5CB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F20E42755146E006FE5CB /* AppState.swift */; };
+		170F20E7275514AD006FE5CB /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F20E6275514AD006FE5CB /* AppAction.swift */; };
+		170F20E9275514F9006FE5CB /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F20E8275514F9006FE5CB /* Reducer.swift */; };
+		170F20EB275516A1006FE5CB /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F20EA275516A1006FE5CB /* AppStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		170F20D62753D21C006FE5CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		170F20D92753D21C006FE5CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		170F20E02753D233006FE5CB /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		170F20E22755139C006FE5CB /* MyButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyButtonStyle.swift; path = ../../SwiftUI_ButtonStyle/SwiftUI_ButtonStyle/MyButtonStyle.swift; sourceTree = "<group>"; };
+		170F20E42755146E006FE5CB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		170F20E6275514AD006FE5CB /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		170F20E8275514F9006FE5CB /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		170F20EA275516A1006FE5CB /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +63,13 @@
 		170F20D12753D219006FE5CB /* SwiftUI_Redux_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				170F20E22755139C006FE5CB /* MyButtonStyle.swift */,
+				170F20EA275516A1006FE5CB /* AppStore.swift */,
+				170F20E6275514AD006FE5CB /* AppAction.swift */,
 				170F20D22753D219006FE5CB /* SwiftUI_Redux_tutorialApp.swift */,
 				170F20D42753D219006FE5CB /* ContentView.swift */,
+				170F20E42755146E006FE5CB /* AppState.swift */,
+				170F20E8275514F9006FE5CB /* Reducer.swift */,
 				170F20E02753D233006FE5CB /* DiceView.swift */,
 				170F20D62753D21C006FE5CB /* Assets.xcassets */,
 				170F20D82753D21C006FE5CB /* Preview Content */,
@@ -141,8 +156,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				170F20D52753D219006FE5CB /* ContentView.swift in Sources */,
+				170F20E7275514AD006FE5CB /* AppAction.swift in Sources */,
+				170F20E52755146E006FE5CB /* AppState.swift in Sources */,
+				170F20E32755139C006FE5CB /* MyButtonStyle.swift in Sources */,
+				170F20E9275514F9006FE5CB /* Reducer.swift in Sources */,
 				170F20E12753D233006FE5CB /* DiceView.swift in Sources */,
 				170F20D32753D219006FE5CB /* SwiftUI_Redux_tutorialApp.swift in Sources */,
+				170F20EB275516A1006FE5CB /* AppStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
