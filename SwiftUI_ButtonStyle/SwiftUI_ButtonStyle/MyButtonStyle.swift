@@ -5,48 +5,29 @@
 //  Created by hyorin song on 2021/11/13.
 //
 
+import Foundation
 import SwiftUI
-
-enum ButtonType{
-    case tab, long//, smaller, rotate, blur
-}
-
-struct MyButtonStyle: ButtonStyle{
+struct MyButtonStyle: ButtonStyle {
     
-    var color : Color
-    var type : ButtonType
-    
+    //
     func makeBody(configuration: Configuration) -> some View {
-        
-        configuration.label
+        configuration
+            .label
             .font(.system(size: 20))
-            .foregroundColor(Color.white)
-            .padding()
-            .background(color)
-            .cornerRadius(20)
-            .scaleEffect(configuration.isPressed ? 1.3 : 1.0)
-            .onTapGesture {
-                if(self.type == .tab){
-                    let haptic = UIImpactFeedbackGenerator(style: .light)
-                    haptic.impactOccurred()
-                }
-            }
-            .onTapGesture {
-                if(self.type == .tab){
-                    let haptic = UIImpactFeedbackGenerator(style: .heavy)
-                    haptic.impactOccurred()
-                }
-            }
-
+           .padding()
+            .background(Color.init(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)))
+           .foregroundColor(Color.white)
+           .cornerRadius(20)
     }
 }
 
 struct MyButtonStyle_Previews: PreviewProvider {
     static var previews: some View {
         Button(action: {
-            print("Click")
+            
         }, label: {
-            Text("호호")
-        }).buttonStyle(MyButtonStyle(color: Color.blue, type: .tab))
+            Text("하하하")
+                .fontWeight(.heavy)
+        }).buttonStyle(MyButtonStyle())
     }
 }

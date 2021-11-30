@@ -22,6 +22,8 @@ struct DiceView: View{
     //주사위 굴리기 액션을 실행
     func rollTheDice(){
         print(#fileID,#function,#line)
+        self.shouldRoll.toggle()
+        
         self.store.dispatch(action: .rollTheDice)
     }
     

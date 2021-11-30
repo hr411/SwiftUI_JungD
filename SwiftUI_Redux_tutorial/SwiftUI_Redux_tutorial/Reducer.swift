@@ -14,6 +14,7 @@ typealias Reducer<State, Action> = (inout State, Action) -> Void
 
 //필터링을 하는 메소드
 func appReducer(_ state: inout AppState, _ action: AppAction) -> Void{
+    print(#fileID,#function,#line,"실행됨")
     //들어오는 액션에 따라 분기 처리 - 즉 필터링
     switch action{
     case .rollTheDice:
