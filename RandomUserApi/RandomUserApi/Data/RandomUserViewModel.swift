@@ -26,12 +26,10 @@ class RandomUserViewModel: ObservableObject {
         print(#fileID, #function, #line, "")
         AF.request(baseUrl)
             .publishDecodable(type: RandomUserResponse.self)
-            .compactMap{
-                $0.value
-            }
-            .sink(receiveCompletion: {completion in print("데이터스트림 완료")}, receiveValue: {
-                [(receivedValue : [RandomUser]) in print("받은 값 : \(receivedValue.)")
-                 randomUsers = receivedValue
+            .compactMap{$0.value}
+            .map{$0.results}
+            .sink(receiveCompletion: {completion in print("데이터스트림 완료")}, receiveValue: {receivedValue in print("받은 값 : \(receivedValue.count)")
+                  self.randomUsers = receivedValue
             }).store(in: &subscription)
         
     }

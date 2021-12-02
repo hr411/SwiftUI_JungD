@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         List(randomUserViewModel.randomUsers) {
-            aRandomUser in RandomUserRowView()
+            aRandomUser in RandomUserRowView(aRandomUser)
         }
     }
 }
