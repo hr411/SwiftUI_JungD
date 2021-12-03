@@ -31,6 +31,15 @@ struct RandomUser: Codable, Identifiable, CustomStringConvertible {
     }
 }
 
+//비교를 위한 Equatable 프로토콜
+extension RandomUser: Equatable{
+    static func == (lhs: RandomUser, rhs: RandomUser) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    
+}
+
 struct Name: Codable, CustomStringConvertible {
     var title : String
     var first : String
