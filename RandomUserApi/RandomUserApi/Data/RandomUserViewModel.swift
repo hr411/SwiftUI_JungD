@@ -21,6 +21,8 @@ class RandomUserViewModel: ObservableObject {
         }
     }
     
+    @Published var isLoading : Bool = false
+    
     var refreshActionSubject = PassthroughSubject<(), Never>()
     var fetchMoreActionSubject = PassthroughSubject<(), Never>()
     
@@ -47,12 +49,14 @@ class RandomUserViewModel: ObservableObject {
             print("페이지 정보가 없습니다")
             return
         }
+        self.isLoading = true
         
         let pageToLoad = currentPage + 1
         AF.request(RandomUserRouter.getUsers(page: pageToLoad))
             .publishDecodable(type: RandomUserResponse.self)
             .compactMap{$0.value}
-            .sink(receiveCompletion: {completion in print("데이터스트림 완료")}, receiveValue: {receivedValue in print("받은 값 : \(receivedValue.results.count)")
+            .sink(receiveCompletion: {completion in print("데이터스트림 완료")
+                self.isLoading = false}, receiveValue: {receivedValue in print("받은 값 : \(receivedValue.results.count)")
                 self.randomUsers += receivedValue.results
                 self.pageInfo = receivedValue.info
             }).store(in: &subscription)
