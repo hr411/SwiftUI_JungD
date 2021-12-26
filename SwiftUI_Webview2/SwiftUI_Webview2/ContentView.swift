@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var textString = "더미텍스트"
+    @State var shouldShowAlert = false
+    
     var body: some View {
 //        MyWebview(urlToLoad: "https://www.naver.com")
         
@@ -22,10 +26,18 @@ struct ContentView: View {
                 .navigationBarTitle(Text("쏭쏭이 웹뷰"), displayMode: .inline)
                 .navigationBarItems(
                     leading: siteMenu,
-                    trailing: Button("iOS -> Js"){print("iOS -> Js 버튼 클릭")
+                    trailing: Button("iOS -> Js"){
+                        print("iOS -> Js 버튼 클릭")
+                        self.shouldShowAlert.toggle()
                 })
-            }
-        }
+                if self.shouldShowAlert{createTextAlert()}
+                Text(textString)
+                    .font(.system(size:26))
+                    .fontWeight(.bold)
+                    .background(Color.yellow)
+                    .offset(y: -(UIScreen.main.bounds.height * 0.3))
+            }//Zstack
+        }//NavigationView
     }
     //사이트 메뉴
     var siteMenu: some View{
@@ -87,6 +99,12 @@ struct ContentView: View {
             }.frame(height:50)
             Divider()
         }
+    }
+}
+
+extension ContentView{
+    func createTextAlert() -> MyTextAlertView {
+        MyTextAlertView(textString: $textString, showAlert: $shouldShowAlert, title: "iOS->Js 보내기", message: "")
     }
 }
 

@@ -12,6 +12,7 @@
 		173B6D102770BB3A0048BDA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173B6D0F2770BB3A0048BDA4 /* Assets.xcassets */; };
 		173B6D132770BB3A0048BDA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173B6D122770BB3A0048BDA4 /* Preview Assets.xcassets */; };
 		173B6D1A2770BB6F0048BDA4 /* MyWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173B6D192770BB6F0048BDA4 /* MyWebview.swift */; };
+		17460A5E2778A75600AD4608 /* MyTextAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17460A5D2778A75600AD4608 /* MyTextAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		173B6D0F2770BB3A0048BDA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		173B6D122770BB3A0048BDA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		173B6D192770BB6F0048BDA4 /* MyWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebview.swift; sourceTree = "<group>"; };
+		17460A5D2778A75600AD4608 /* MyTextAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				173B6D0B2770BB380048BDA4 /* SwiftUI_Webview2App.swift */,
 				173B6D0D2770BB380048BDA4 /* ContentView.swift */,
+				17460A5D2778A75600AD4608 /* MyTextAlertView.swift */,
 				173B6D192770BB6F0048BDA4 /* MyWebview.swift */,
 				173B6D0F2770BB3A0048BDA4 /* Assets.xcassets */,
 				173B6D112770BB3A0048BDA4 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				173B6D0E2770BB380048BDA4 /* ContentView.swift in Sources */,
 				173B6D1A2770BB6F0048BDA4 /* MyWebview.swift in Sources */,
+				17460A5E2778A75600AD4608 /* MyTextAlertView.swift in Sources */,
 				173B6D0C2770BB380048BDA4 /* SwiftUI_Webview2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
