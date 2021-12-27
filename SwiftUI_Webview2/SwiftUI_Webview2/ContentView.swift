@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @EnvironmentObject var myWebVM : WebViewModel
     
     @State var textString = "더미텍스트"
     @State var shouldShowAlert = false
@@ -31,11 +33,11 @@ struct ContentView: View {
                         self.shouldShowAlert.toggle()
                 })
                 if self.shouldShowAlert{createTextAlert()}
-                Text(textString)
-                    .font(.system(size:26))
-                    .fontWeight(.bold)
-                    .background(Color.yellow)
-                    .offset(y: -(UIScreen.main.bounds.height * 0.3))
+//                Text(textString)
+//                    .font(.system(size:26))
+//                    .fontWeight(.bold)
+//                    .background(Color.yellow)
+//                    .offset(y: -(UIScreen.main.bounds.height * 0.3))
             }//Zstack
         }//NavigationView
     }
@@ -46,16 +48,19 @@ struct ContentView: View {
             .contextMenu(ContextMenu(menuItems: {
                 Button(action: {
                     print("쏭쏭이 웹뷰 이동")
+                    self.myWebVM.changedUrlSubject.send(.DEV_SONG)
                 }, label: {
                     Text("쏭쏭이 웹뷰 이동 ♔")
                 })
                 Button(action: {
                     print("네이버 이동")
+                    self.myWebVM.changedUrlSubject.send(.NAVER)
                 }, label: {
                     Text("네이버 이동 ♖")
                 })
                 Button(action: {
                     print("구글 이동")
+                    self.myWebVM.changedUrlSubject.send(.GOOGLE)
                 }, label: {
                     Text("구글 이동 ♘")
                 })
