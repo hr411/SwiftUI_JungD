@@ -13,7 +13,7 @@ typealias WEB_NAVIGATION = WebViewModel.NAVIGATION
 class WebViewModel: ObservableObject {
     
     enum NAVIGATION {
-        case BACK, FROWARD, REFRESH
+        case BACK, FORWARD, REFRESH
     }
     
     enum URL_TYPE {
@@ -33,5 +33,14 @@ class WebViewModel: ObservableObject {
         }
     }
     //웹뷰의 url이 변경
-    var changedUrlSubject = PassthroughSubject<WebViewModel.Never>()
+    var changedUrlSubject = PassthroughSubject<WebViewModel.URL_TYPE, Never>()
+    
+    //웹뷰 네비게이션 액션에 대한 이벤트
+    var webNavigationSubject = PassthroughSubject<WEB_NAVIGATION, Never>()
+    
+    //웹사이트 타이틀 이벤트
+    var webSiteTitleSubject = PassthroughSubject<String, Never>()
+    
+    //ios -> js 함수 호출
+    var nativeToJsEvent = PassthroughSubject<String, Never>()
 }

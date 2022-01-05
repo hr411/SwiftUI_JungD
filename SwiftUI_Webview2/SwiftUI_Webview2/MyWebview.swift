@@ -79,8 +79,58 @@ extension MyWebview.Coordinator: WKUIDelegate{
 
 //MARK: - WKNavigationDelegate 관련
 extension MyWebview.Coordinator: WKNavigationDelegate{
+    
+    //웹뷰 검색 시작
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!){
+        print("webView didStartProvisionalNavigation")
+        myWebView
+            .viewModel
+            .webNavigationSubject
+            .sink{ (action: WEB_NAVIGATION) in
+                print("들어온 네비게이션 액션: \(action)")
+                switch action{
+                case.BACK:
+                    if webView.canGoBack{
+                        webView.goBack()
+                    }
+                case.FORWARD:
+                    if webView.canGoForward{
+                        webView.goForward()
+                    }
+                case.REFRESH:
+                    webView.reload()
+                }
+            }.store(in: &subscriptions)
+    }
+
+    //웹뷰 검색 완료
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!){
         print("webView didFinish")
+        
+        webView.evaluateJavaScript("document.title"){(response, error) in
+            if let error = error {
+                print("타이틀 에러로 못 가져옴")
+            }
+            if let title = response as? String {
+                self.myWebView.viewModel.webSiteTitleSubject.send(title)
+            }
+        }
+        
+        myWebView
+            .viewModel
+            .nativeToJsEvent
+            .sink{ message in
+                print("didFinish() called / nativeToJsEvent 이벤트 들어옴 / messge: \(message)")
+                webView.evaluateJavaScript("nativeToJsEventCall('\(message)')", completionHandler: {(result, error) in
+                    if let result = result {
+                        print("nativeToJs result 성공: \(result)")
+                    }
+                    if let error = error {
+                        print("nativeToJs result 실패 : \(error.localizedDescription)")
+                    }
+                })
+            }.store(in: &subscriptions)
+        
         myWebView
             .viewModel
             .changedUrlSubject

@@ -14,6 +14,7 @@
 		173B6D1A2770BB6F0048BDA4 /* MyWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173B6D192770BB6F0048BDA4 /* MyWebview.swift */; };
 		17460A5E2778A75600AD4608 /* MyTextAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17460A5D2778A75600AD4608 /* MyTextAlertView.swift */; };
 		17460A602779F2CD00AD4608 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17460A5F2779F2CD00AD4608 /* WebViewModel.swift */; };
+		17460A622785C50800AD4608 /* JsAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17460A612785C50800AD4608 /* JsAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		173B6D192770BB6F0048BDA4 /* MyWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebview.swift; sourceTree = "<group>"; };
 		17460A5D2778A75600AD4608 /* MyTextAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextAlertView.swift; sourceTree = "<group>"; };
 		17460A5F2779F2CD00AD4608 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		17460A612785C50800AD4608 /* JsAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		173B6CFF2770BB380048BDA4 = {
 			isa = PBXGroup;
 			children = (
+				17460A612785C50800AD4608 /* JsAlert.swift */,
 				173B6D0A2770BB380048BDA4 /* SwiftUI_Webview2 */,
 				173B6D092770BB380048BDA4 /* Products */,
 			);
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				173B6D0E2770BB380048BDA4 /* ContentView.swift in Sources */,
+				17460A622785C50800AD4608 /* JsAlert.swift in Sources */,
 				173B6D1A2770BB6F0048BDA4 /* MyWebview.swift in Sources */,
 				17460A5E2778A75600AD4608 /* MyTextAlertView.swift in Sources */,
 				17460A602779F2CD00AD4608 /* WebViewModel.swift in Sources */,

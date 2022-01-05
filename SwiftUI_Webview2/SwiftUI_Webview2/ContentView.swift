@@ -12,8 +12,10 @@ struct ContentView: View {
 
     @EnvironmentObject var myWebVM : WebViewModel
     
-    @State var textString = "더미텍스트"
+    @State var jsAlert : JsAlert?
+    @State var textString = ""
     @State var shouldShowAlert = false
+    @State var webTitle : String = ""
     
     var body: some View {
 //        MyWebview(urlToLoad: "https://www.naver.com")
@@ -25,12 +27,15 @@ struct ContentView: View {
                     MyWebview(urlToLoad: "https://hr411.github.io/simple_js_alert/")
                     webViewBottomTabbar
                 }
-                .navigationBarTitle(Text("쏭쏭이 웹뷰"), displayMode: .inline)
+                .navigationBarTitle(Text(webTitle), displayMode: .inline)
                 .navigationBarItems(
                     leading: siteMenu,
                     trailing: Button("iOS -> Js"){
                         print("iOS -> Js 버튼 클릭")
                         self.shouldShowAlert.toggle()
+                })
+                .alert(item: $jsAlert, content: { alert in
+                    createAlert(alert)
                 })
                 if self.shouldShowAlert{createTextAlert()}
 //                Text(textString)
@@ -39,6 +44,11 @@ struct ContentView: View {
 //                    .background(Color.yellow)
 //                    .offset(y: -(UIScreen.main.bounds.height * 0.3))
             }//Zstack
+            .onReceive(myWebVM.webSiteTitleSubject, perform: {receivedWebTitle in
+                print("ContentView - webTitle: ", receivedWebTitle)
+                self.webTitle = receivedWebTitle
+            })
+        
         }//NavigationView
     }
     //사이트 메뉴
@@ -74,6 +84,7 @@ struct ContentView: View {
                 Spacer()
                 Button(action: {
                     print("뒤로가기")
+                    self.myWebVM.webNavigationSubject.send(.BACK)
                 }, label: {
                     Image(systemName: "arrow.backward")
                         .font(.system(size: 20))
@@ -85,6 +96,7 @@ struct ContentView: View {
                 }
                 Button(action: {
                     print("앞으로가기")
+                    self.myWebVM.webNavigationSubject.send(.FORWARD)
                 }, label: {
                     Image(systemName: "arrow.forward")
                         .font(.system(size: 20))
@@ -96,6 +108,7 @@ struct ContentView: View {
                 }
                 Button(action: {
                     print("새로고침")
+                    self.myWebVM.webNavigationSubject.send(.REFRESH)
                 }, label: {
                     Image(systemName: "arrow.clockwise")
                         .font(.system(size: 20))
@@ -107,7 +120,15 @@ struct ContentView: View {
     }
 }
 
-extension ContentView{
+extension ContentView {
+    func createAlert(_ alert: JsAlert)-> Alert{
+        Alert(title: Text(alert.type.description), message: Text(alert.message), dismissButton: .default(Text("확인"), action:{
+                print("알림창 확인 버튼이 클릭되었다")
+        }))
+    }
+                    
+                    
+    // 텍스트 입력 알림창
     func createTextAlert() -> MyTextAlertView {
         MyTextAlertView(textString: $textString, showAlert: $shouldShowAlert, title: "iOS->Js 보내기", message: "")
     }
